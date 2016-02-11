@@ -1,11 +1,28 @@
 var pblib = require('./lib/pipboy_connection');
 var express = require('express');
+var _ = require('underscore');
 
 var database = {status: 'no connection'};
-pblib.register(function(data) {
-  process.stdout.write('.');
-  database = data;
+var guard = false;
+pblib.register('Inventory', function(data) {
+  database.Inventory = data;
+  database.status = 'connected';
 });
+
+pblib.register('PlayerInfo', function(data) {
+  database.PlayerInfo = data;
+  database.status = 'connected';
+});
+
+pblib.register('Quests', function(data) {
+  database.Quests = data;
+  database.status = 'connected';
+});
+
+pblib.register('Map', _.throttle(function(data) {
+  database.Map = data;
+  database.status = 'connected';
+}, 500));
 
 
 var app = express();

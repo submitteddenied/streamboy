@@ -43,7 +43,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('build', ['browserify:dist']);
 
-  grunt.registerTask('compile', ['browserify:dist', /*'sass',*/ 'copy']);
+  grunt.registerTask('compile', ['browserify:dist', 'sass', 'copy']);
 
   grunt.registerTask('dev', ['compile']);
   grunt.registerTask('default', 'dev');

@@ -1,0 +1,13 @@
+.mapContainer {
+  width: 500px;
+  height: 500px;
+  position: relative;
+  background-color: teal;
+
+  .mapMarker {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: black;
+  }
+}

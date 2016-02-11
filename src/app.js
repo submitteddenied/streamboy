@@ -9,16 +9,15 @@ window.onload = function() {
     document.getElementById('content')
   );
 
-  //window.refreshInterval = window.setInterval(function() {
-    //$.ajax({
-      //url: 'data.json',
-      //success: updateFrame
-    //});
-  //}, 5000);
+  window.refreshInterval = window.setInterval(function() {
+    $.ajax({
+      url: 'data.json',
+      success: updateFrame
+    });
+  }, 1000);
 }
 
 function updateFrame(data) {
-  console.log('.');
   React.render(
     <GameUI data={data} />,
     document.getElementById('content')
