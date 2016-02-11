@@ -1,6 +1,6 @@
 {
   "name": "streamboy",
-  "version": "0.0.4",
+  "version": "0.0.1",
   "description": "A webserver and view for your FO4 stats",
   "main": "index.js",
   "scripts": {},

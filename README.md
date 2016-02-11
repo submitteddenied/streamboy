@@ -1,13 +1,16 @@
-# pipboycli
+# Streamboy
 
-A blessed cli for your Fallout 4 PipBoy
 
-## Installation
+
+## Get Started
 
 ```
-npm install -g pipboycli
+npm install
 ```
 
-## Usage
+Then, with Fallout 4 running somewhere on your LAN (with the Pipboy Companion App enabled)
+```
+grunt
+```
 
-Run `pipboycli`, be amazed at the wonders of a single HP bar.
+Open your browser to `http://localhost:3000`
