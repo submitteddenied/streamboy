@@ -22,6 +22,7 @@
     "pipboylib": "^1.1.0",
     "react": "^0.13.3",
     "rx": "^4.0.7",
-    "stream-browserify": "^2.0.1"
+    "stream-browserify": "^2.0.1",
+    "underscore": "^1.8.3"
   }
 }
