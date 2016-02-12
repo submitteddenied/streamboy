@@ -1,0 +1,27 @@
+.player-info {
+  margin: 10px;
+  h1 {
+    font-weight: bold;
+    font-size: 18px;
+  }
+  *::before {
+    font-weight: bold;
+    font-size:  15px;
+  }
+
+  .level::before {
+    content: "lvl: ";
+  }
+
+  .caps::before {
+    content: "caps: ";
+  }
+
+  .hp::before {
+    content: "hp: ";
+  }
+
+  .weight::before {
+    content: "weight: ";
+  }
+}

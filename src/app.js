@@ -1,26 +1,34 @@
 var React = require('react');
-var dummyData = require('../db.json');
 var Loading = require('./components/loading');
 var GameUI = require('./components/game-ui');
+// window.dummyData = require('../db.json');
+// window.topLeft = require('../top-left.json');
+// window.bridge = require('../on-bridge.json');
 
-// Your code here
 window.onload = function() {
   React.render(
-    <GameUI data={dummyData} />,
+    <Loading />,
     document.getElementById('content')
   );
 
-  //window.refreshInterval = window.setInterval(function() {
-    //$.ajax({
-      //url: 'data.json',
-      //success: updateFrame
-    //});
-  //}, 1000);
+  window.refreshInterval = window.setInterval(function() {
+    $.ajax({
+      url: 'data.json',
+      success: updateFrame
+    });
+  }, 1000);
 }
 
-function updateFrame(data) {
-  React.render(
-    <GameUI data={data} />,
-    document.getElementById('content')
-  );
+window.updateFrame = function updateFrame(data) {
+  if(data.status == 'connected') {
+    React.render(
+      <GameUI data={data} />,
+      document.getElementById('content')
+    );
+  } else {
+    React.render(
+      <Loading />,
+      document.getElementById('content')
+    );
+  }
 }

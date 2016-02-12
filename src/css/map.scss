@@ -1,13 +1,27 @@
-.mapContainer {
-  width: 500px;
-  height: 500px;
-  position: relative;
-  background-color: cyan;
+.mapWrapper {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
 
-  .mapMarker {
+  background-image: url('images/fo4_world_map.jpg');
+  background-size: 100%;
+  width: 600px;
+  height: 600px;
+  overflow: hidden;
+
+  .mapContainer {
     position: absolute;
-    width: 5px;
-    height: 5px;
-    background-color: black;
+    /*these values are tightly coupled to the map asset in use...*/
+    width: 584px;
+    height: 594px;
+    top: 13px;
+    left: 86px;
+
+    .mapMarker {
+      position: absolute;
+      width: 5px;
+      height: 5px;
+      background-color: $border-color;
+    }
   }
 }

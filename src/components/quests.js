@@ -3,23 +3,24 @@ var React = require('react/addons');
 
 var Quests = module.exports = React.createClass({
   questRows: function() {
-    //Inventory type "44" is ammo
     return this.props.Quests.filter(function(q) {
       return q.active;
     }).map(function(quest) {
       var activeObjectives = quest.objectives.filter(function(o) { return o.enabled });
       var objectiveText = activeObjectives.map(function(o) { return o.text; }).join(' or ');
       return (
-        <li key={quest.formID}>{quest.text}: {objectiveText}</li>
-      )
+        <div className="quest" key={quest.formID}>
+          <h1>{quest.text}</h1>
+          <p>{objectiveText}</p>
+        </div>
+      );
     });
   },
   render: function() {
     return (
-      <ul>
+      <div className="quests">
         {this.questRows()}
-      </ul>
+      </div>
     );
   }
 });
-

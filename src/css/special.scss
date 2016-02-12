@@ -1,0 +1,39 @@
+.special {
+  font-family: monospace;
+  position:absolute;
+  top: 0;
+  width: 100%;
+  text-align: center;
+
+  span {
+    margin-right: 15px;
+    font-size: 30px;
+  }
+
+  span::before {
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: capitalize;
+  }
+  .s::before {
+    content: "S";
+  }
+  .p::before {
+    content: "P";
+  }
+  .e::before {
+    content: "E";
+  }
+  .c::before {
+    content: "C";
+  }
+  .i::before {
+    content: "I";
+  }
+  .a::before {
+    content: "A";
+  }
+  .l::before {
+    content: "L";
+  }
+}
